@@ -41,6 +41,7 @@ function Search({ setSearchData, data, search, setSearch }) {
       <input
         type="text"
         placeholder="Search..."
+        value={search}
         onChange={(e) => setSearch(e.target.value)}
       ></input>
     </div>

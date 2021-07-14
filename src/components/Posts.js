@@ -43,6 +43,7 @@ function Posts() {
         <button
           className="reset"
           onClick={() => {
+            setSearch('');
             fetchData("https://jsonplaceholder.typicode.com/posts");
           }}
         >
