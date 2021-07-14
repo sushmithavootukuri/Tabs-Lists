@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import "font-awesome/css/font-awesome.min.css";
+
 function Search({ setSearchData, data, search, setSearch }) {
   function inputHandler() {
     const newArr = data
@@ -10,7 +12,8 @@ function Search({ setSearchData, data, search, setSearch }) {
       .map((item) => {
         let newTitle = item.title.replace(
           new RegExp(search, "gi"),
-          (match) => `<mark style="background: rgb(0, 204, 255); ">${match}</mark>`
+          (match) =>
+            `<mark style="background: rgb(0, 204, 255); ">${match}</mark>`
         );
         let newBody = item.body.replace(
           new RegExp(search, "gi"),
@@ -32,11 +35,15 @@ function Search({ setSearchData, data, search, setSearch }) {
   }, [search]);
 
   return (
-    <input
-      type="text"
-      placeholder="Search..."
-      onChange={(e) => setSearch(e.target.value)}
-    />
+    <div>
+      <i className="fa fa-search search-icon" aria-hidden="true"></i>
+
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={(e) => setSearch(e.target.value)}
+      ></input>
+    </div>
   );
 }
 
