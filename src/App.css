@@ -56,6 +56,10 @@ button {
   text-align: right;
 }
 
+.reset:hover {
+  box-shadow: 0 2px 15px grey;
+}
+
 input {
   padding: 10px 35px;
   width: 25%;
@@ -92,7 +96,7 @@ input {
 }
 .card {
   width: 17rem;
-  box-shadow: 0 2px 10px grey;
+  box-shadow: 0 1px 10px grey;
   border-top: 6px solid rgb(0, 204, 255);
   border-radius: 15px;
   padding: 1rem;
@@ -101,6 +105,10 @@ input {
   margin: 1rem;
   text-align: left;
   word-break: keep-all;
+}
+
+.card:hover {
+  box-shadow: 0 3px 30px grey;
 }
 
 .card-id {
@@ -115,6 +123,10 @@ input {
   cursor: pointer;
   background: transparent;
   color: red;
+}
+
+.card .close:hover {
+  font-size: 1.7rem;
 }
 
 .loader {
