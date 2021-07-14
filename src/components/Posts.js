@@ -59,7 +59,9 @@ function Posts() {
       />
 
       {isLoading ? (
-        <h1 className="loader">Loading...<i className="fa fa-spinner fa-spin"></i></h1>
+        <h1 className="loader">
+          Loading...<i className="fa fa-spinner fa-spin"></i>
+        </h1>
       ) : search.length > 0 && searchData.length === 0 ? (
         <h1>No records found</h1>
       ) : searchData.length > 0 ? (

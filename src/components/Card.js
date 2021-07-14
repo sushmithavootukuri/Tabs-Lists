@@ -1,5 +1,5 @@
 import React from "react";
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
 
 function Card({ post, setPosts, posts }) {
   function createMarkup(html) {
@@ -8,13 +8,12 @@ function Card({ post, setPosts, posts }) {
 
   return (
     <div className="card">
-    
-      <h4 dangerouslySetInnerHTML={createMarkup("Title : "+post.title)}></h4>
-      <p className="card-id">{"Id : " + post.id}</p> 
-   <hr/>
-    
+      <h4 dangerouslySetInnerHTML={createMarkup("Title : " + post.title)}></h4>
+      <p className="card-id">{"Id : " + post.id}</p>
+      <hr />
+
       <p dangerouslySetInnerHTML={createMarkup(post.body)}></p>
-     
+
       <button
         className="close"
         onClick={() => {
@@ -22,12 +21,10 @@ function Card({ post, setPosts, posts }) {
           let index = newArray.findIndex((item) => item.id === post.id);
           newArray.splice(index, 1);
           setPosts(newArray);
-          
         }}
       >
-    <i className="fa fa-trash" aria-hidden="true"></i>
+        <i className="fa fa-trash" aria-hidden="true"></i>
       </button>
-   
     </div>
   );
 }

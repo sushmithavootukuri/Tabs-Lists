@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 import "../App.css";
 
-function Tabs({ data,setPosts }) {
+function Tabs({ data, setPosts }) {
   const [toggleState, setToggleState] = useState(1);
 
   let thirdPosts = data.filter((post) => post.category === "thirds");
